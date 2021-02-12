@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Link from 'next/link'
 
 import Burger from '@animated-burgers/burger-squeeze'
 import { Modal } from 'react-responsive-modal'
@@ -19,9 +20,9 @@ const Header = () => {
       </nav>
       <Modal classNames={{overlay: 'modal-overlay', modal: 'modal-content'}}
       open={open} onClose={openCloseModal} showCloseIcon={false} center>
-        <a className="modal-link" href="/">HOME</a>
-        <a className="modal-link" href="/">LOGIN</a>
-        <a className="modal-link" href="/">SIGNUP</a>
+        <Link href="/"><a className="modal-link">HOME</a></Link>
+        <Link href="/login"><a className="modal-link">LOGIN</a></Link>
+        <Link href="/"><a className="modal-link">SIGNUP</a></Link>
       </Modal>
     </div>
   )
