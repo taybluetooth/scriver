@@ -17,13 +17,19 @@ const IndexPage = () => {
         </>
       )}
       {session && (
-        <>
-          Signed In as {session.user.email} <br />
-        <div>
-          You can now access our secret shit
-        </div>
-        <button onClick={signOut}>Sign Out</button>
-        </>
+        <Layout bg={true}>
+          <div className="index-background">
+            <h1 className="index-header">
+              Organise all your stuff with Scriver.
+            </h1>
+            <button className="index-button">
+              Get Started
+            </button>
+            <button className="index-button" onClick={signOut}>
+              Sign Out
+            </button>
+          </div>
+        </Layout>
       )}
     </main>
     /*
