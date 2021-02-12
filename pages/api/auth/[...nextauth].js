@@ -1,13 +1,14 @@
 // [...nextauth] is a dynamic route
-import NextAuth from 'nextauth'
+import NextAuth from 'next-auth'
 import Providers from 'next-auth/providers'
 
 const options = {
-  providers = [
+  providers: [
     Providers.GitHub({
       clientId: "",
       clientSecret: ""
     })
+    /*
     Providers.Email({
       server: {
         host: "",
@@ -19,5 +20,8 @@ const options = {
       },
       from: ""
     })
+    */
   ]
 }
+
+export default(req,res) => NextAuth(req,res,options)
