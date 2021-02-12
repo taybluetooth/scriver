@@ -5,8 +5,8 @@ import Providers from 'next-auth/providers'
 const options = {
   providers: [
     Providers.GitHub({
-      clientId: "",
-      clientSecret: ""
+      clientId: process.env.GITHUB_ID,
+      clientSecret: process.env.GITHUB_SECRET
     })
     /*
     Providers.Email({
