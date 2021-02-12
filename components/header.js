@@ -3,11 +3,6 @@ import React, { useState } from 'react'
 import Burger from '@animated-burgers/burger-squeeze'
 import { Modal } from 'react-responsive-modal'
 
-import '@animated-burgers/burger-squeeze/dist/styles.css'
-import 'react-responsive-modal/styles.css'
-import '../styles/header.scss'
-import '../styles/modal.scss'
-
 const Header = () => {
 
   const [open, setOpen] = useState(false)
