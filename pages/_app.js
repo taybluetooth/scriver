@@ -7,10 +7,15 @@ import '../styles/index.scss'
 import '../styles/header.scss'
 import '../styles/modal.scss'
 import '../styles/layout.scss'
-import '../styles/login.scss'
+// next modules
+import Provider from 'next-auth/client'
 
 function MyApp({ Component, pageProps }) {
-  return <Component {...pageProps} />
+  return (
+    <Provider session={pageProps.session}>
+      <Component {...pageProps} />
+    </Provider>
+  )
 }
 
 export default MyApp
