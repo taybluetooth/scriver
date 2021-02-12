@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.navbar {
+  @apply flex;
+  @apply flex-wrap;
+  @apply w-auto;
+  @apply h-20;
+  @apply px-5;
+  @apply items-center;
+  @apply justify-between;
+  @apply bg-darkblue;
+  @apply text-white;
+}
+
+.nav-toggle {
+  @apply flex;
+  @apply w-auto;
+  @apply text-right;
+  @apply md:mt-0;
+  z-index: 999999 !important;
+}

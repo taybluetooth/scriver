@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.index-header {
+  @apply text-4xl;
+  @apply text-white;
+}
+
+.index-button  {
+  @apply bg-coral;
+  @apply text-white;
+  @apply p-5;
+  @apply mt-3;
+  @apply rounded;
+}

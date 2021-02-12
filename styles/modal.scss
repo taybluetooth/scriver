@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.modal-overlay {
+  @apply bg-darkpurple;
+}
+
+.modal-content {
+  @apply bg-darkpurple;
+  @apply shadow-none;
+  @apply text-white;
+  @apply text-xl;
+  @apply p-6;
+
+  @apply md:text-3xl;
+}
+
+.modal-link {
+  @apply mx-2;
+}

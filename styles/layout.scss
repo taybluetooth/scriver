@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap');
+
+* {
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  min-height: 100%;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.layout-container {
+  @apply flex;
+  @apply flex-col;
+  @apply min-h-full;
+}
+
+.layout-content, .layout-content-bg {
+  height: calc(100vh - (5rem));
+
+  @apply flex;
+  @apply flex-col;
+  @apply w-full;
+  @apply justify-center;
+  @apply items-center;
+  @apply text-center;
+  @apply overflow-auto;
+}
+
+.layout-content {
+  @apply bg-darkblue;
+}
+
+.layout-content-bg {
+  background-image: linear-gradient(
+      rgba(0, 4, 28, 0.80),
+      rgba(0, 4, 28, 0.80)
+    ), url('https://wallpaperaccess.com/full/1393245.jpg');
+  background-position: center;
+  background-size: cover;
+}
