@@ -1,7 +1,10 @@
-import { useState, useEffect } from 'react'
-import { useSession } from 'next-auth/client'
+import React, { useState, useEffect } from 'react'
 
-export default function Secret() {
+import {signOut, useSession} from 'next-auth/client'
+
+import Layout from '../components/layout'
+
+const Secret = () => {
   const [session, loading] = useSession()
   const [content, setContent] = useState()
 
@@ -16,4 +19,31 @@ export default function Secret() {
       fetchData()
     }
   }, [session])
+
+  if(typeof window !== 'undefined' && loading) {
+    return null
+  }
+
+  if(!session) {
+    return (
+      <main>
+        <h1> You are not signed in.</h1>
+      </main>
+    )
+  }
+
+  return (
+    <Layout bg={true}>
+      <div className="index-background">
+        <h1 className="index-header">
+          Take Control of Disorder.
+        </h1>
+        <button className="index-button" onClick={signOut}>
+          Sign Out
+        </button>
+      </div>
+    </Layout>
+  )
 }
+
+export default Secret

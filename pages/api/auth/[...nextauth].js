@@ -8,19 +8,18 @@ const options = {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET
     })
-    /*
-    Providers.Email({
+
+    /*Providers.Email({
       server: {
-        host: "",
-        port: "",
+        host: process.env.EMAIL_SERVER_HOST,
+        port: process.env.EMAIL_SERVER_PORT,
         auth: {
-          user: "",
-          pass: ""
+          user: process.env.EMAIL_SERVER_USER,
+          pass: process.env.EMAIL_SERVER_PASS
         }
       },
-      from: ""
-    })
-    */
+      from: process.env.EMAIL_SERVER_FROM
+    })*/
   ]
 }
 
