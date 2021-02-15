@@ -8,7 +8,11 @@ const options = {
       clientId: process.env.GITHUB_ID,
       clientSecret: process.env.GITHUB_SECRET
     })
-
+    Providers.Auth0({
+      clientDomain: process.env.AUTH0_DOMAIN,
+      clientId: process.env.AUTH0_CLIENT_ID,
+      clientSecret: process.env.AUTH0_CLIENT_SECRET,
+    })
     /*Providers.Email({
       server: {
         host: process.env.EMAIL_SERVER_HOST,
