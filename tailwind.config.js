@@ -10,4 +10,8 @@ module.exports = {
       }
     }
   },
+  corePlugins: {
+      // ...
+     textDecoration: false,
+    }
 }
