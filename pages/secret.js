@@ -34,11 +34,11 @@ const Secret = () => {
 
   return (
     <Layout bg={true}>
-      <div className="index-background">
-        <h1 className="index-header">
-          Take Control of Disorder.
+      <div className='index-background'>
+        <h1 className='index-header'>
+          Take Control of Disorder, {session.user.name}
         </h1>
-        <button className="index-button" onClick={signOut}>
+        <button className='index-button' onClick={signOut}>
           Sign Out
         </button>
       </div>

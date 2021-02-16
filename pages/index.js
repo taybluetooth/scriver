@@ -14,11 +14,11 @@ const IndexPage = () => {
     <main>
       {!session && (
         <Layout bg={true}>
-          <div className="index-background">
-            <h1 className="index-header">
+          <div className='index-background'>
+            <h1 className='index-header'>
               Organise all your stuff with Scriver.
             </h1>
-            <button className="index-button" onClick={signIn}>
+            <button className='index-button' onClick={signIn}>
               Get Started
             </button>
           </div>
