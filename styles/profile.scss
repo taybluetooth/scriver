@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.profile-header {
+  @apply flex;
+  @apply flex-row;
+  @apply justify-center;
+  @apply items-center;
+  @apply space-x-4;
+  @apply py-10;
+}
+
+.profile-banner {
+  @apply text-2xl;
+  @apply text-center;
+}
+
+.profile-image {
+  @apply rounded-full;
+  @apply w-20;
+  @apply md:w-40;
+}
+
+.profile-main {
+  @apply flex;
+  @apply flex-col;
+  @apply justify-center;
+  @apply items-center;
+  @apply space-y-4;
+  @apply text-left;
+}

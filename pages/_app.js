@@ -3,6 +3,7 @@ import '@animated-burgers/burger-squeeze/dist/styles.css'
 import 'react-responsive-modal/styles.css'
 // page stylesheets
 import '../styles/index.scss'
+import '../styles/profile.scss'
 // component stylesheets
 import '../styles/header.scss'
 import '../styles/modal.scss'

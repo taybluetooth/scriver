@@ -4,7 +4,7 @@ import {signIn, useSession} from 'next-auth/client'
 
 import Layout from '../components/layout'
 
-import Secret from './secret'
+import Profile from './profile'
 
 const IndexPage = () => {
 
@@ -14,7 +14,7 @@ const IndexPage = () => {
     <main>
       {!session && (
         <Layout bg={true}>
-          <div className='index-background'>
+          <div>
             <h1 className='index-header'>
               Organise all your stuff with Scriver.
             </h1>
@@ -25,9 +25,9 @@ const IndexPage = () => {
         </Layout>
       )}
       {session && (
-        <Secret>
+        <Profile>
 
-        </Secret>
+        </Profile>
       )}
     </main>
   )

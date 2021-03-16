@@ -4,7 +4,7 @@ import {signOut, useSession} from 'next-auth/client'
 
 import Layout from '../components/layout'
 
-const Secret = () => {
+const Profile = () => {
   const [session, loading] = useSession()
   const [content, setContent] = useState()
 
@@ -27,23 +27,24 @@ const Secret = () => {
   if(!session) {
     return (
       <main>
-        <h1> You are not signed in.</h1>
+        <h1>You are not signed in.</h1>
       </main>
     )
   }
 
   return (
-    <Layout bg={true}>
-      <div className='index-background'>
-        <h1 className='index-header'>
-          Take Control of Disorder, {session.user.name}
-        </h1>
-        <button className='index-button' onClick={signOut}>
-          Sign Out
-        </button>
+    <Layout profile={true}>
+      <div>
+        <div className='profile-header'>
+          <h1 className='profile-banner'> Welcome, {session.user.name}</h1>
+          <img className='profile-image' src={session.user.image}></img>
+        </div>
+        <div className='profile-main'>
+          <b><p>{session.user.name}'s To-Do-List </p></b>
+        </div>
       </div>
     </Layout>
   )
 }
 
-export default Secret
+export default Profile

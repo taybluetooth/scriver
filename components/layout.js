@@ -6,15 +6,22 @@ const Layout = (props) => {
   return (
     <div className="layout-container">
       <Header />
-      {(props.bg ?
-      <div className="layout-content-bg">
-        {props.children}
-      </div>
+      {
+      (props.bg ?
+        <div className="layout-content-bg">
+          {props.children}
+        </div>
       :
-      <div className="layout-content">
-        {props.children}
-      </div>
-      )}
+      props.profile ?
+        <div className="layout-content-profile">
+          {props.children}
+        </div>
+      :
+        <div className="layout-content">
+          {props.children}
+        </div>
+      )
+     }
     </div>
   )
 }

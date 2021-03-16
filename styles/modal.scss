@@ -19,3 +19,8 @@
 .modal-link {
   @apply mx-2;
 }
+
+.modal-link:focus {
+  @apply outline-none;
+  @apply shadow-none;
+}

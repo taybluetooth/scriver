@@ -31,7 +31,7 @@ body {
   @apply min-h-full;
 }
 
-.layout-content, .layout-content-bg {
+.layout-content, .layout-content-bg, .layout-content-profile {
   height: calc(100vh - (5rem));
 
   @apply flex;
@@ -45,6 +45,15 @@ body {
 
 .layout-content {
   @apply bg-darkblue;
+}
+
+.layout-content-profile {
+  @apply justify-center;
+  @apply align-top;
+  @apply text-center;
+  @apply bg-white;
+  @apply p-2;
+  @apply space-y-4;
 }
 
 .layout-content-bg {
